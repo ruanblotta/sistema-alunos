@@ -1,0 +1,29 @@
+@model List<CadastroAlunos.Models.Aluno>
+
+@{
+    ViewData["Title"] = "Listagem de Cadastros";
+}
+
+<h2>Listagem de Cadastros</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aluno in Model)
+        {
+            <tr>
+                <td>@aluno.Nome</td>
+                <td>@aluno.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-controller="Aluno" asp-action="Index">Voltar para a página inicial</a>
+</p>

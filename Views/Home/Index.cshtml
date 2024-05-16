@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- index.cshtml -->
+<form asp-controller="Aluno" asp-action="Cadastro" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="Nome" /><br />
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="Email" /><br />
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+<p>
+    <a asp-controller="Aluno" asp-action="ListagemCadastros">Ver Cadastros</a>
+</p>
